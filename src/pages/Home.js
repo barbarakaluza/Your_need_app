@@ -4,7 +4,7 @@ import Logo from "../components/Logo/Logo";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Logo/>
         </div>
     )

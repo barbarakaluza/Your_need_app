@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+html {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #33443C;
+  color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 320px) and (max-width: 419px) {
+  .App {
+    text-align: center;
+    background-color: #33443C;
+  }
+
+  /* Mobile S (do 576px) */
+@media (max-width: 576px) {
+  .logo {
+    width: calc(100vw - 30px); 
+    max-width: 816.3px; 
+    height: auto; 
+    margin-top: 60px; 
+    margin-left: 15px; 
+    margin-right: 15px; 
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Mobile M (do 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .logo {
+    width: calc(100vw - 60px); 
+    max-width: 816.3px; 
+    height: auto; 
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-right: 30px; 
   }
 }
+
+/* Mobile L (od 769px) */
+@media (min-width: 769px) {
+  .logo {
+    width: calc(100% - 120px); 
+    max-width: 500px;
+    height: auto; 
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+}
+

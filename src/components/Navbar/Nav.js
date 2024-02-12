@@ -6,6 +6,8 @@ class Nav extends React.Component {
     }
 
     render() {
+
+        return (
         <nav className="nav">
             <ul>
                 <li className="nav-link"><a href="#">My visits</a></li>
@@ -17,6 +19,7 @@ class Nav extends React.Component {
 
             </ul>
         </nav>
+        )
     }
 }
 
