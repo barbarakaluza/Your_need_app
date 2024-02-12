@@ -1,21 +1,52 @@
-import React from "react";
+import React, { useState } from 'react';
 
-class LoginForm extends ReactcComponents {
-    state = {
-        name: '',
-        password: ''
-    }
+import LoginButton from "./LoginButton";
 
-    render() {
-        <form className="form">
-            <label htmlFor="username" className="form-input"></label>
-          <Input name="username" placeholder="USERNAME" value="username"></Input>
+function LoginForm({children}) {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-          <label htmlFor="password" className="form-input">Age</label>
-          <Input name="password" placeholder="PASSWORD" value="password"></Input>
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
 
-        </form>
-    }
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Tutaj można dodać logikę przetwarzania formularza (np. uwierzytelnianie)
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="username"></label>
+        <input className='login-input'
+          type="text"
+          id="username"
+          value={username}
+          onChange={handleUsernameChange}
+          placeholder="USERNAME"
+          required
+        />
+      </div>
+
+      <div>
+        <label htmlFor="password"></label>
+        <input className='login-input'
+          type="password"
+          id="password"
+          value={password}
+          onChange={handlePasswordChange}
+          placeholder="PASSWORD"
+          required
+        />
+      </div>
+        <LoginButton/>
+    </form>
+  );
 }
 
 export default LoginForm;

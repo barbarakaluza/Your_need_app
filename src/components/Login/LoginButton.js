@@ -2,7 +2,7 @@ import React from "react";
 
 function LoginButton() {
     return(
-        <button><img/></button>
+        <button className="login-button" type="submit">Get Started!</button>
     )
 }
 
